@@ -1,0 +1,686 @@
+@font-face {
+  font-family: "TT Hoves";
+  src: url("/assets/fonts/TT/TTRegular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/assets/fonts/SanFrancisco/Regular.otf");
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+html body h1, html body h2, html body p, html body ul {
+  margin: 0;
+  padding: 0;
+}
+html body img {
+  width: 100%;
+  max-width: 100%;
+}
+html body button, html body a {
+  cursor: pointer;
+}
+html body i {
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 102px;
+  padding: 0 135px;
+}
+
+.logo {
+  width: 69px;
+  height: 42px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+  padding-left: 330px;
+}
+.nav-item:first-child {
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+.nav-item:hover {
+  transform: scale(1.3, 1.3);
+  color: #BDBDBD;
+  box-shadow: 10px 5px 5px #BDBDBD;
+}
+.nav-link {
+  text-decoration: none;
+  color: #333333;
+  font-family: "TT Hoves";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.section {
+  padding: 0 135px 120px;
+  color: #333333;
+  font-family: "TT Hoves";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+}
+.section-header {
+  color: #BDBDBD;
+  font-size: 64px;
+  font-weight: 300px;
+  line-height: 64px;
+}
+.section-galary {
+  display: flex;
+  justify-content: space-between;
+}
+.section-about {
+  padding-bottom: 150px;
+}
+.section-projects {
+  display: flex;
+  flex-direction: column;
+}
+.section-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.galary-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.galary-item-project {
+  color: #BDBDBD;
+  font-family: "TT Hoves";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 64px; /* 100% */
+  padding-top: 336px;
+}
+.galary-item-home {
+  color: #333333;
+  font-family: "TT Hoves";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 100% */
+}
+.galary-item-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0 94px;
+  gap: 23px;
+}
+
+.arrow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  background-color: #FFF;
+  border: 1px solid #F2F2F2;
+  cursor: pointer;
+}
+.arrow-btn:hover {
+  background-color: #F2F2F2;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+}
+
+.wrapper-nums {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  color: #BDBDBD;
+  font-family: "TT Hoves";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 100% */
+}
+.wrapper-nums-item {
+  color: #BDBDBD;
+  font-family: "TT Hoves";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 100% */
+}
+.wrapper-nums-line {
+  width: 33px;
+}
+
+.galary-item-right {
+  position: relative;
+  width: 770px;
+  height: 829px;
+}
+.galary-item-right-img {
+  width: 770px;
+  height: 829px;
+}
+
+.btn {
+  width: 222px;
+  height: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #FFF;
+}
+.btn:hover {
+  background-color: #BDBDBD;
+  transition: all 0.6s ease;
+}
+.btn span {
+  padding-right: 12px;
+  color: #333333;
+  font-family: "TT Hoves";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+.btn-see {
+  position: absolute;
+  bottom: 0;
+}
+.btn-details {
+  width: 129px;
+  height: 24px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding-top: 14px;
+  transition: all 0.6s ease;
+}
+.btn-details:hover {
+  transform: scale(1.2, 1.2);
+}
+.btn-details span {
+  padding-right: 12px;
+  color: #FFF;
+  font-family: "TT Hoves";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+.btn-projects {
+  background-color: #333333;
+  align-self: flex-end;
+}
+.btn-projects span {
+  color: #FFF;
+}
+.btn-contacts {
+  background-color: #333333;
+}
+.btn-contacts span {
+  color: #FFF;
+}
+
+.wrapper-about {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+  background-color: #FBFBFB;
+  padding: 30px 70px 30px 100px;
+  text-transform: none;
+  height: 435px;
+}
+.wrapper-about-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.wrapper-about-company {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-img1 {
+  width: 270px;
+  height: 265px;
+}
+
+.about-img2 {
+  width: 270px;
+  height: 345px;
+  margin-top: 30px;
+}
+
+.about-img3 {
+  width: 270px;
+  height: 140px;
+  position: absolute;
+  bottom: -30px;
+}
+
+.about-text {
+  width: 400px;
+  height: 200px;
+  color: #000000;
+  font-family: "TT Hoves";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 0;
+}
+
+.goals {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 187px;
+  padding-top: 60px;
+}
+.goals-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  height: 144px;
+}
+.goals-item:nth-child(1) {
+  width: 413px;
+}
+.goals-item-num {
+  color: #F2F2F2;
+  font-family: "SF Pro Display";
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+.goals-item-text {
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px; /* 163.636% */
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 60px 0 30px;
+}
+.projects-item:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 570px;
+  height: 255px;
+  background: linear-gradient(to right, rgba(31, 31, 31, 0.8), rgba(51, 51, 51, 0.8)), url(/assets/img/projects1.png);
+  padding-left: 79px;
+}
+.projects-item-span {
+  color: #FFF;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 100% */
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.contacts-img {
+  width: 749px;
+  height: 369px;
+}
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.textfield {
+  width: 391px;
+  height: 46px;
+  position: relative;
+}
+.textfield__label {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  display: block;
+  color: #8D8D8D;
+  font-family: "TT Hoves";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  user-select: none;
+  cursor: text;
+}
+.textfield__label::after {
+  position: relative;
+  top: -3px;
+  left: 1px;
+  display: inline-block;
+  content: "*";
+  color: #C30000;
+}
+.textfield__input {
+  display: block;
+  height: 48px;
+  width: 100%;
+  padding: 11px 14px;
+  border: none;
+  background-color: #F3F3F3;
+  color: #8D8D8D;
+  font-family: "TT Hoves";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  outline: none;
+  transition: all 0.25s linear;
+}
+.textfield__input:disabled {
+  border-color: #333333;
+  background: #BDBDBD;
+}
+.textfield__input::placeholder {
+  color: transparent;
+}
+.textfield__input:focus + .textfield__label, .textfield__input:valid + .textfield__label, .textfield__input:disabled + .textfield__label {
+  display: none;
+}
+
+.contacts-text {
+  width: 331px;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  margin-left: 40px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #2C2C2C;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.footer-contacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 58px 212px 60px 116px;
+}
+
+.footer-logo {
+  width: 145px;
+  height: 94px;
+}
+
+.footer-item-header {
+  padding-bottom: 25px;
+}
+.footer-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-item-list-li {
+  list-style: none;
+}
+.footer-item-list-li-li:hover {
+  transform: scale(1.2, 1.2);
+  transition: all 0.7s ease-in-out;
+}
+
+.footer-contact-list {
+  gap: 33px;
+}
+
+.footer-contact-list span {
+  padding-left: 15px;
+}
+
+.footer-social-list {
+  flex-direction: row;
+  gap: 40px;
+}
+
+.footer-item-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.42px;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.icons {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+.footer-line {
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+  opacity: 0.1;
+}
+
+.footer-author {
+  margin: 0 auto;
+  color: rgba(200, 200, 200, 0.5);
+  font-family: "Open", Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 183.333% */
+  padding: 24px 0 24px;
+}
+
+@media (max-width: 1200px) {
+  .section {
+    padding: 0 105px 100px;
+  }
+  .section-galary {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .section-about {
+    padding-bottom: 100px;
+  }
+  .section-projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .nav {
+    justify-content: flex-end;
+    padding-left: 100px;
+    gap: 30px;
+  }
+  .galary-item {
+    justify-content: center;
+    align-items: center;
+  }
+  .galary-item-project {
+    padding-top: 30px;
+  }
+  .galary-item-arrows {
+    padding: 60px 0 64px;
+  }
+  .about-img2 {
+    display: none;
+  }
+  .goals {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-top: 40px;
+  }
+  .goals-item {
+    width: 100%;
+  }
+  .goals-item:nth-child(1) {
+    width: 100%;
+  }
+  .goals-item-text {
+    line-height: 28px; /* 163.636% */
+  }
+  .projects {
+    justify-content: center;
+    align-items: center;
+  }
+  .contacts {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .contacts-text {
+    margin: 0 auto;
+  }
+  .btn-contacts {
+    margin: 0 auto;
+  }
+  .footer-contacts {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 152px 60px 86px;
+  }
+}
+@media (max-width: 992px) {
+  .section {
+    padding: 0 85px 80px;
+  }
+  .section-about {
+    padding-bottom: 60px;
+  }
+  .section-contacts {
+    gap: 20px;
+  }
+  .nav {
+    justify-content: flex-end;
+    padding-left: 70px;
+    gap: 30px;
+  }
+  .galary-item-project {
+    padding-top: 30px;
+  }
+  .galary-item-arrows {
+    padding: 30px 0 34px;
+  }
+  .wrapper-about {
+    justify-content: flex-start;
+  }
+  .wrapper-about-imgs {
+    display: none;
+  }
+  .wrapper-about-company {
+    margin: 0 auto;
+  }
+  .projects-item:nth-child(3),
+  .projects-item:nth-child(4),
+  .projects-item:nth-child(5) {
+    display: none;
+  }
+  .footer-contacts {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-item:nth-child(2) {
+    display: none;
+  }
+  .footer-contact-list {
+    gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 0 55px 50px;
+  }
+  .section-about {
+    padding-bottom: 30px;
+  }
+  .section-contacts {
+    gap: 10px;
+  }
+  .nav {
+    justify-content: flex-end;
+    padding-left: 30px;
+    gap: 30px;
+  }
+  .goals {
+    gap: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
