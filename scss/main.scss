@@ -4,10 +4,10 @@ $color-grey-3: #E0E0E0;
 $color-grey-4: #F2F2F2;
 $color-grey-5: #FBFBFB;
 $color-grey-6: #F3F3F3;
-$color-dark: #000000;
 $color-grey7: #F9F9F9;
 $color-grey-8: rgba(200, 200, 200, 0.50);
 $color-grey-9: #8D8D8D;
+$color-dark: #000000;
 $color-dark-1:  #2C2C2C;
 $color-white: #FFF;
 $color-red: #C30000;
@@ -23,7 +23,6 @@ $color-red: #C30000;
     src: url("/assets/fonts/SanFrancisco/Regular.otf");
     font-weight: 400;
 }
-
 
 * {
     box-sizing: border-box;
@@ -65,6 +64,7 @@ html {
     align-items: center;
     height: 102px;
     padding: 0 135px;
+    gap: 330px;
 }
 
 .logo {
@@ -78,7 +78,6 @@ html {
     align-items: center;
     gap: 60px;
     list-style: none; 
-    padding-left: 330px;
     &-item:first-child {
         border-top-style: solid;
         border-bottom-style: solid ;
@@ -99,6 +98,10 @@ html {
         letter-spacing: 2.4px;
         text-transform: uppercase;
     }
+}
+
+.burger-menu {
+    display: none;
 }
 
 // main
@@ -408,8 +411,14 @@ html {
 }
 
 // section contacts
+.wrapper-contacts {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+}
 .contacts {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 30px;
     &-img {
@@ -425,10 +434,23 @@ html {
 }
 
 .textfield {
-        width: 391px;
-        height: 46px;
         position: relative;
-        &__label {
+        &-label {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            display: block;
+            color: $color-grey-9;
+            font-family: 'TT Hoves';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.56px;
+            user-select: none;
+            cursor: text;
+        }
+        &-label-red {
             position: absolute;
             top: 12px;
             left: 15px;
@@ -453,7 +475,7 @@ html {
     }
     &__input {
         display: block;
-        height: 48px;
+        height: 46px;
         width: 100%;
         padding: 11px 14px;
         border: none;
@@ -482,19 +504,91 @@ html {
     }
 }
 
+.textareafield {
+    position: relative;
+    &__input {
+        height: 147px;
+        width: 100%;
+        padding: 11px 14px;
+        border: none;
+        background-color: $color-grey-6;
+        color: $color-grey-9;
+        font-family: 'TT Hoves';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        text-align: left;
+        line-height: normal;
+        letter-spacing: 0.56px;
+        transition: all 0.25s linear;
+        &::after {
+            position: absolute;
+            top: -3px;
+            left: 1px;
+            display: inline-block;
+            content: "*";
+            color: $color-red;
+        }
+        &:disabled {
+            border-color: $color-grey-1;
+            background: $color-grey-2;
+        }
+    }
+}
+
+.checkboxfield {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0 20px 20px;
+}
+
+.checkbox-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid $color-grey-1;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    &::before {
+        content: "";
+        width: 0.65em;
+        height: 0.7em;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        transform: scale(0);
+        transform-origin: bottom left;
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em $color-grey-1;
+        background-color: $color-white;
+    }
+    &:checked::before {
+        transform: scale(1);
+    }
+    &:disabled {
+        color: $color-grey-2;
+        cursor: not-allowed;
+    }
+}
+
 .contacts-text {
     width: 331px;
     font-size: 14px;
     line-height: normal;
     letter-spacing: 0.42px;
-    margin-left: 40px;
 }
 
 // footer
+.footer {
+    background-color: $color-dark-1;
+}
 .footer-container {
     display: flex;
     flex-direction: column;
-    background-color: $color-dark-1;
     color: $color-white;
     font-size: 16px;
     font-style: normal;
@@ -523,7 +617,7 @@ html {
         gap: 16px;
         &-li {
             list-style: none;
-            &-li:hover {
+            &:hover {
                 transform: scale(1.2, 1.2);
                 transition: all .7s ease-in-out;
             }
@@ -578,7 +672,17 @@ html {
     padding: 24px 0 24px;
 }
 
+@media(max-width: 1300px) {
+    .header-container {
+        gap: 200px;
+    }
+}
+
 @media(max-width: 1200px) {
+    .header-container {
+        gap: 100px;
+        padding: 0 100px;
+    }
     .section {
         padding: 0 105px 100px;
         &-galary {
@@ -604,7 +708,6 @@ html {
 
     .nav {
         justify-content: flex-end;
-        padding-left: 100px;
         gap: 30px;
     }
 
@@ -647,6 +750,11 @@ html {
     }
 
     // contacts
+    .wrapper-contacts {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
 
     .contacts {
         flex-direction: column-reverse;
@@ -669,6 +777,14 @@ html {
 }
 
 @media(max-width: 992px) {
+    .header {
+        position: relative;
+        &-container {
+            justify-content: space-between;
+            padding: 0 60px;
+        }
+    }
+
     .section {
         padding: 0 85px 80px;
         &-about {
@@ -680,11 +796,87 @@ html {
     }
 
     .nav {
-        justify-content: flex-end;
-        padding-left: 70px;
-        gap: 30px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 300px;
+        height: 500px;
+        background-color: var(--dark-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 0.5s ease-in-out;
+
     }
 
+    .nav.active {
+        position: absolute;
+        z-index: 1;
+        transform: translateX(0);
+        background-color: $color-grey-3;
+    }
+
+    .burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 22px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .burger-menu.active {
+        height: 32px;
+        position: absolute;
+        right: 60px;
+        z-index: 2;
+    }
+
+    .burger-menu span {
+        width: 45px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $color-grey-1;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .burger-menu span:nth-of-type(2) {
+        top: calc(50% - 10px);
+    }
+    .burger-menu span:nth-of-type(3) {
+        top: calc(50% + 10px);
+    }
+    .burger-menu.active span:nth-of-type(1) {
+        display: none;
+    }
+    .burger-menu.active span:nth-of-type(2) {
+        width: 42px;
+        /* transform: rotate(135deg); */
+        top: 45%;
+        transform: translate(-50%, 0%) rotate(135deg);  
+    }
+    .burger-menu.active span:nth-of-type(3) {
+        width: 42px;
+        /* transform: rotate(-135deg); */
+        top: 45%;
+        /* transform: translate(-50%, 0%) rotate(-45deg);  */
+        transform: translate(-50%, 0%) rotate(-135deg); 
+    }
+
+
+// section galary
     .galary-item {
         &-project {
             padding-top: 30px;
@@ -723,6 +915,10 @@ html {
 }
 
 @media(max-width: 768px) {
+    .header-container {
+        gap: 30px;
+        padding: 0 30px;
+    }
     .section {
         padding: 0 55px 50px;
         &-about {
@@ -735,12 +931,14 @@ html {
 
     .nav {
         justify-content: flex-end;
-        padding-left: 30px;
         gap: 30px;
     }
 
-    
     .goals {
         gap: 20px;     
+    }
+
+    .contacts-img {
+        display: none;
     }
 }

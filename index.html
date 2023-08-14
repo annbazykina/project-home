@@ -22,6 +22,11 @@
                     <li class="nav-item"><a href="#contacts" class="nav-link">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -110,69 +115,80 @@
             </section>
             <section class="section section-contacts" id="contacts">
                 <h2 class="section-header">Связаться с нами</h2>
-                <div class="contacts">
-                    <form action="" class="registration">
-                        <div class="textfield">
-                            <input 
-                                type="text"
-                                name="name"
-                                id="name"
-                                class="textfield__input"
-                                required
-                            >
-                            <label for="tel" class="textfield__label textfield__label--required">Имя</label>
-                        </div>
-                        <div class="textfield">
-                            <input 
-                                class="textfield__input registration-input" 
-                                type="tel"
-                                name="tel"
-                                id="tel"
-                                required
-                            >
-                            <label for="tel" class="textfield__label textfield__label--required">Номер телефона</label>
-                        </div>
-                        <div class="textfield">
-                            <input
-                                class="textfield__input registration-input" 
-                                type="email"
-                                name="email"
-                                id="email"
-                                required
-                            >
-                            <label for="email" class="textfield__label textfield__label--required">Email</label>
-                        </div>
-                        <div class="textfield">
-                            <input 
-                                class="textfield__input"
-                                type="text"
-                                placeholder="Интересующий товар/услуга"
-                                name="product"
-                                id="product"
-                                required
-                            >
-                            <label for="email" class="textfield__label textfield__label--required">Интересующий товар/услуга</label>
-                        </div>
-                        <div class="textfield">
-                            <input 
-                                type="text"
-                                id="message" 
-                                class="textfield__input message-input " 
-                                name="message" 
-                                height="147"
-                                required
-                            >
-                            </input>
-                            <label for="message" class="textfield__label textfield__label--required">Сообщение</label>
-                        </div>
-                    </form>
+                <div class="wrapper-contacts">
+                    <div class="contacts">
+                        <form action="" class="registration">
+                            <div class="textfield">
+                                <input 
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    class="textfield__input"
+                                    required
+                                >
+                                <label for="tel" class="textfield-label textfield__label--required">Имя</label>
+                            </div>
+                            <div class="textfield">
+                                <input 
+                                    class="textfield__input registration-input" 
+                                    type="tel"
+                                    name="tel"
+                                    id="tel"
+                                    required
+                                >
+                                <label for="tel" class="textfield-label-red textfield__label--required">Номер телефона</label>
+                            </div>
+                            <div class="textfield">
+                                <input
+                                    class="textfield__input registration-input" 
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    required
+                                >
+                                <label for="email" class="textfield-label-red textfield__label--required">Email</label>
+                            </div>
+                            <div class="textfield">
+                                <input 
+                                    class="textfield__input"
+                                    type="text"
+                                    placeholder="Интересующий товар/услуга"
+                                    name="product"
+                                    id="product"
+                                    required
+                                >
+                                <label for="email" class="textfield-label textfield__label--required">Интересующий товар/услуга</label>
+                            </div>
+                            <div class="textareafield">
+                                <textarea 
+                                    type="text"
+                                    id="message" 
+                                    class="textareafield__input"
+                                    name="message" 
+                                    required
+                                >Сообщение</textarea>
+                                
+                            </div>
+                            <div class="checkboxfield">
+                                <input type="checkbox" id="checkbox-btn" class="checkbox-input" >
+                                <label for="checkbox-btn" class="contacts-text">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</label>
+                            </div>
+                            
+                            <button class="btn btn-contacts">
+                                <span>ОТПРАВИТЬ</span>
+                                <img src="./assets/svg/arrow-r-white.svg" alt="arrow" class="arrow">
+                            </button>
+                        </form>
+                        
+                    </div>
                     <img src="/assets/img/contact.png" alt="Photo" class="contacts-img">
+                    <!-- <span class="contacts-text">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</span>
+                    <button class="btn btn-contacts">
+                        <span>ОТПРАВИТЬ</span>
+                        <img src="./assets/svg/arrow-r-white.svg" alt="arrow" class="arrow">
+                    </button> -->
                 </div>
-                <span class="contacts-text">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</span>
-                <button class="btn btn-contacts">
-                    <span>ОТПРАВИТЬ</span>
-                    <img src="./assets/svg/arrow-r-white.svg" alt="arrow" class="arrow">
-                </button>
+                
             </section>
         </div>
     </main>
@@ -233,5 +249,8 @@
             <div class="footer-author">© 2019 Digital Project. Все права защищены.</div>
         </div>
     </footer>
+
+
+    <script src="index.script"></script>
 </body>
 </html>
