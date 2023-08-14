@@ -468,7 +468,7 @@ html body i {
 .textfield__input::placeholder {
   color: transparent;
 }
-.textfield__input:focus + .textfield__label, .textfield__input:valid + .textfield__label, .textfield__input:disabled + .textfield__label {
+.textfield__input:focus + .textfield-label-red, .textfield__input:valid + .textfield-label-red, .textfield__input:disabled + .textfield-label-red, .textfield__input:focus + .textfield-label, .textfield__input:valid + .textfield-label, .textfield__input:disabled + .textfield-label {
   display: none;
 }
 
@@ -491,17 +491,16 @@ html body i {
   letter-spacing: 0.56px;
   transition: all 0.25s linear;
 }
-.textareafield__input::after {
-  position: absolute;
-  top: -3px;
-  left: 1px;
-  display: inline-block;
-  content: "*";
-  color: #C30000;
-}
 .textareafield__input:disabled {
   border-color: #333333;
   background: #BDBDBD;
+}
+
+.star {
+  position: absolute;
+  left: 95px;
+  top: 10px;
+  color: #C30000;
 }
 
 .checkboxfield {
@@ -641,6 +640,9 @@ html body i {
   .header-container {
     gap: 200px;
   }
+  .about-img2 {
+    display: none;
+  }
 }
 @media (max-width: 1200px) {
   .header-container {
@@ -682,9 +684,6 @@ html body i {
   }
   .galary-item-arrows {
     padding: 60px 0 64px;
-  }
-  .about-img2 {
-    display: none;
   }
   .goals {
     flex-direction: column;

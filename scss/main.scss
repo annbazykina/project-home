@@ -497,9 +497,12 @@ html {
             color: transparent;
         }
     }
-    &__input:focus + &__label,
-    &__input:valid + &__label,
-    &__input:disabled + &__label {
+    &__input:focus + &-label-red,
+    &__input:valid + &-label-red,
+    &__input:disabled + &-label-red,
+    &__input:focus + &-label,
+    &__input:valid + &-label,
+    &__input:disabled + &-label {
         display: none;
     }
 }
@@ -521,19 +524,21 @@ html {
         line-height: normal;
         letter-spacing: 0.56px;
         transition: all 0.25s linear;
-        &::after {
-            position: absolute;
-            top: -3px;
-            left: 1px;
-            display: inline-block;
-            content: "*";
-            color: $color-red;
-        }
         &:disabled {
             border-color: $color-grey-1;
             background: $color-grey-2;
         }
+        // &:focus + .star {
+        //     display: none;
+        // }
     }
+}
+
+.star {
+    position: absolute;
+    left: 95px;
+    top: 10px;
+    color: $color-red;
 }
 
 .checkboxfield {
@@ -676,6 +681,10 @@ html {
     .header-container {
         gap: 200px;
     }
+
+    .about-img2 {
+        display: none;
+    }
 }
 
 @media(max-width: 1200px) {
@@ -722,9 +731,6 @@ html {
         }
     }
 
-    .about-img2 {
-        display: none;
-    }
 
     //goals
     .goals {
@@ -812,7 +818,6 @@ html {
         align-items: center;
         transform: translateX(100%);
         transition: all 0.5s ease-in-out;
-
     }
 
     .nav.active {
