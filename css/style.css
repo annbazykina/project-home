@@ -132,7 +132,7 @@ html body i {
   font-size: 64px;
   font-style: normal;
   font-weight: 300;
-  line-height: 64px; /* 100% */
+  line-height: 64px;
   padding-top: 336px;
 }
 .galary-item-home {
@@ -180,7 +180,7 @@ html body i {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 100% */
+  line-height: 24px;
 }
 .wrapper-nums-item {
   color: #BDBDBD;
@@ -188,7 +188,7 @@ html body i {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 100% */
+  line-height: 24px;
 }
 .wrapper-nums-line {
   width: 33px;
@@ -416,7 +416,7 @@ html body i {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 14px;
   letter-spacing: 0.56px;
   user-select: none;
   cursor: text;
@@ -431,7 +431,7 @@ html body i {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 14px;
   letter-spacing: 0.56px;
   user-select: none;
   cursor: text;
@@ -456,7 +456,7 @@ html body i {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 14px;
   letter-spacing: 0.56px;
   outline: none;
   transition: all 0.25s linear;
@@ -486,8 +486,8 @@ html body i {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  line-height: 14px;
   text-align: left;
-  line-height: normal;
   letter-spacing: 0.56px;
   transition: all 0.25s linear;
 }

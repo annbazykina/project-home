@@ -24,6 +24,48 @@ $color-red: #C30000;
     font-weight: 400;
 }
 
+@mixin small-text {
+    font: {
+        family: 'TT Hoves';
+        size: 12px;
+        style: normal;
+        weight: 400;
+    }
+    line-height: 12px;
+}
+
+@mixin small-text14 {
+    font: {
+        family: 'TT Hoves';
+        size: 14px;
+        style: normal;
+        weight: 400;
+    }
+    line-height: 14px;
+}
+
+@mixin small-text24 {
+    font: {
+        family: 'TT Hoves';
+        size: 24px;
+        style: normal;
+        weight: 400;
+        
+    }
+    line-height: 24px;
+}
+
+@mixin large-text {
+    font: {
+        family: 'TT Hoves';
+        size: 64px;
+        style: normal;
+        weight: 300;
+    }
+    line-height: 64px; 
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -90,11 +132,7 @@ html {
     &-link {
         text-decoration: none;
         color: $color-grey-1;
-        font-family: 'TT Hoves';
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 12px; 
+        @include small-text; 
         letter-spacing: 2.4px;
         text-transform: uppercase;
     }
@@ -110,13 +148,7 @@ html {
     // flex-wrap: wrap;
     padding: 0 135px 120px;
     color: $color-grey-1;
-    font: {
-        family: 'TT Hoves';
-        size: 12px;
-        style: normal;
-        weight: 400;
-    }
-    line-height: 12px; 
+    @include small-text;
     &-header {
         color: $color-grey-2;
         font: {
@@ -150,19 +182,17 @@ html {
     align-items: flex-start;
     &-project {
         color: $color-grey-2;
-        font-family: 'TT Hoves';
-        font-size: 64px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 64px; /* 100% */
+        @include large-text;
         padding-top: 336px;
     }
     &-home {
         color: $color-grey-1;
-        font-family: 'TT Hoves';
-        font-size: 64px;
-        font-style: normal;
-        font-weight: 700;
+        font: {
+            family: 'TT Hoves';
+            size: 64px;
+            style: normal;
+            weight: 700;
+        }
         line-height: 64px; /* 100% */
     }
     &-arrows {
@@ -199,18 +229,10 @@ html {
     align-items: center;
     gap: 25px;
     color: $color-grey-2;
-    font-family: 'TT Hoves';
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 100% */
+    @include small-text24;
     &-item {
     color: $color-grey-2;
-    font-family: 'TT Hoves';
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 100% */
+    @include small-text24;
     }
     &-line {
         width: 33px;
@@ -242,11 +264,7 @@ html {
     & span {
         padding-right: 12px;
         color: $color-grey-1;
-        font-family: 'TT Hoves';
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 12px; 
+        @include small-text;
         letter-spacing: 2.4px;
         text-transform: uppercase;
     }
@@ -270,11 +288,7 @@ html {
         & span {
             padding-right: 12px;
             color: $color-white;
-            font-family: 'TT Hoves';
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 12px; 
+            @include small-text;
             letter-spacing: 2.4px;
             text-transform: uppercase;
         }
@@ -441,11 +455,7 @@ html {
             left: 15px;
             display: block;
             color: $color-grey-9;
-            font-family: 'TT Hoves';
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+            @include small-text14;
             letter-spacing: 0.56px;
             user-select: none;
             cursor: text;
@@ -456,11 +466,7 @@ html {
             left: 15px;
             display: block;
             color: $color-grey-9;
-            font-family: 'TT Hoves';
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+            @include small-text14;
             letter-spacing: 0.56px;
             user-select: none;
             cursor: text;
@@ -481,11 +487,7 @@ html {
         border: none;
         background-color: $color-grey-6;
         color: $color-grey-9;
-        font-family: 'TT Hoves';
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        @include small-text14;
         letter-spacing: 0.56px;
         outline: none;
         transition: all 0.25s linear;
@@ -516,21 +518,14 @@ html {
         border: none;
         background-color: $color-grey-6;
         color: $color-grey-9;
-        font-family: 'TT Hoves';
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
+        @include small-text14;
         text-align: left;
-        line-height: normal;
         letter-spacing: 0.56px;
         transition: all 0.25s linear;
         &:disabled {
             border-color: $color-grey-1;
             background: $color-grey-2;
         }
-        // &:focus + .star {
-        //     display: none;
-        // }
     }
 }
 
